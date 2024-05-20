@@ -34,6 +34,11 @@ public class Main {
                 break;
             }
 
+            if (isBoardFull(board)) {
+                System.out.println("It's a draw!");
+                break;
+            }
+
             currentPlayer = currentPlayer.equals("X") ? "O" : "X";
         }
 
@@ -56,7 +61,7 @@ public class Main {
                 }
             }
 
-            System.out.println(rowBuilder.toString());
+            System.out.println(rowBuilder);
             if ( i < board.length - 1) {
                 System.out.println("---------");
             }
